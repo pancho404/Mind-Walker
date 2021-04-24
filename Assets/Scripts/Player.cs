@@ -28,29 +28,32 @@ public class Player : MonoBehaviour
         Jump();
         Movement();
     }
-
     private void Movement()
     {
         if (Input.GetKey(KeyCode.D))
         {
             transform.position += Vector3.right * Time.deltaTime * speed;
+            if (transform.rotation.y == 1f)
+            {
+                transform.RotateAround(transform.position, transform.up, -180f);
+            }
         }
-
         if (Input.GetKey(KeyCode.A))
         {
             transform.position += Vector3.left * Time.deltaTime * speed;
+            if (transform.rotation.y == 0f)
+            {
+                transform.RotateAround(transform.position, transform.up, 180f);
+            }
         }
     }
-
     private void Jump()
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space) )
         {
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
-
         }
     }
-
     private void GroundCheck()
     {
         isGrounded = Physics2D.OverlapArea(new Vector2(transform.position.x - 1.1f, transform.position.y - 1.1f),
