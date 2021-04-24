@@ -8,8 +8,9 @@ public class CameraController : MonoBehaviour
 
     private void Start()
     {
-
+      
     }
+
     void LateUpdate()
     {
         Vector3 temp = transform.position;
@@ -19,4 +20,5 @@ public class CameraController : MonoBehaviour
 
         transform.position = temp;
     }
+
 }
