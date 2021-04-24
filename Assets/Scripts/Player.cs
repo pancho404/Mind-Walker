@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public BoxCollider2D box;
     public Rigidbody2D rb;
     public bool isGrounded;
-    public float thrust = 10f;
+    public float jumpForce = 10f;
     public float speed = 8f;
     // Start is called before the first frame update
     void Start()
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
     {
         if (isGrounded && Input.GetKeyDown(KeyCode.Space) )
         {
-            rb.AddForce(Vector2.up * thrust, ForceMode2D.Impulse);
+            rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
 
         }
     }
