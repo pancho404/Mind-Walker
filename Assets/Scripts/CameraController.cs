@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public GameObject player;
+    [SerializeField]
+    float offset,zOffset;
 
     private void Start()
     {
@@ -16,7 +18,8 @@ public class CameraController : MonoBehaviour
         Vector3 temp = transform.position;
 
         temp.x = player.transform.position.x;
-        temp.y = player.transform.position.y;
+        temp.y = player.transform.position.y + offset;
+        temp.z = -10 + zOffset;
 
         transform.position = temp;
     }

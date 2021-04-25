@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
         animator.SetBool("Run", false);
         animator.SetBool("Pushing", false);
     }
-
     private void Movement()
     {
         Vector2 playerInput;
