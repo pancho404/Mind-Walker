@@ -12,12 +12,12 @@ public class Player : MonoBehaviour
     public SpriteRenderer sprite;
     public Animator animator;
     public bool isGrounded;
+    public bool isPushing;
     
     public float jumpForce = 10f;
     public float speed = 8f;
     public float strenght = 5f;
 
-    float movementColliderCounter = 10;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,16 +27,37 @@ public class Player : MonoBehaviour
     }
     private void FixedUpdate()
     {
-
+        
     }
     // Update is called once per frame
     void Update()
     {
-        animator.SetBool("Run", false) ;
+        SetAnimatorBoolsToFalse();
         GroundCheck();
         Movement();
+        OnGround();
+        PushAnimator();
     }
-   
+
+    private void PushAnimator()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 0.56f, groundLayers);
+        RaycastHit2D hit2 = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.6f, groundLayers);
+        if (hit)
+        {
+            animator.SetBool("Pushing", true);
+        }
+        if (hit2)
+        {
+            animator.SetBool("Pushing", true);
+        }
+    }
+    private void SetAnimatorBoolsToFalse()
+    {
+        animator.SetBool("Run", false);
+        animator.SetBool("Pushing", false);
+    }
+
     private void Movement()
     {
         Vector2 playerInput;
@@ -82,16 +103,15 @@ public class Player : MonoBehaviour
 
     void OnGround()
     {
+        if (isGrounded)
+        {
             animator.SetBool("Jump", false);
             animator.SetBool("Grounded", true);
+        }
     }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Ground")
-        {
-            OnGround();
-        }
+        
     }
 
 }
