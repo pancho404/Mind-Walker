@@ -43,11 +43,11 @@ public class Player : MonoBehaviour
     {
         RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.right), 0.56f, groundLayers);
         RaycastHit2D hit2 = Physics2D.Raycast(transform.position, transform.TransformDirection(Vector2.left), 0.6f, groundLayers);
-        if (hit)
+        if (hit && isGrounded)
         {
             animator.SetBool("Pushing", true);
         }
-        if (hit2)
+        if (hit2 && isGrounded)
         {
             animator.SetBool("Pushing", true);
         }
