@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3876897453350680720}
   - component: {fileID: 8269313071963750153}
   - component: {fileID: 7548585857876185547}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: BloqueB
   m_TagString: Untagged
   m_Icon: {fileID: 0}

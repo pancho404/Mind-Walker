@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5198342787068004393}
   - component: {fileID: 5198342787068004392}
-  - component: {fileID: 3579090557285312089}
-  m_Layer: 0
+  - component: {fileID: 2626994467912610918}
+  m_Layer: 6
   m_Name: Repisa
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,8 +83,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &3579090557285312089
-PolygonCollider2D:
+--- !u!61 &2626994467912610918
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -96,7 +96,7 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.08183034}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -106,17 +106,6 @@ PolygonCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 1.2020357, y: 0.39601597}
-      - {x: 0.9654943, y: 0.4059716}
-      - {x: 0.95952964, y: 0.16853918}
-      - {x: -0.9601524, y: 0.16440524}
-      - {x: -0.9612312, y: 0.39601597}
-      - {x: -1.2004681, y: 0.39992228}
-      - {x: -1.2028515, y: -0.5662811}
-      - {x: -0.9492391, y: -0.57400393}
-      - {x: -0.955215, y: -0.32916206}
-      - {x: 0.9565449, y: -0.32578248}
-      - {x: 0.96615225, y: -0.57504046}
-      - {x: 1.2105737, y: -0.5662811}
+  serializedVersion: 2
+  m_Size: {x: 2.4089198, y: 0.47976473}
+  m_EdgeRadius: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7098927471086428945}
   - component: {fileID: 7098927471086428950}
   - component: {fileID: -6045076107486718443}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PROP_Ambulancia
   m_TagString: Untagged
   m_Icon: {fileID: 0}

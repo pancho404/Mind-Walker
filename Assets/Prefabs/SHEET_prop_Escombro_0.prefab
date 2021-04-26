@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3144910824875555960}
   - component: {fileID: 3144910824875555967}
   - component: {fileID: 8401259473297363990}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SHEET_prop_Escombro_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
